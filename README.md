@@ -73,16 +73,16 @@ _Follow the steps below to install the project in your local machine._
    ```sh
    goto wordpress admin > apperance > themes > select wp-excel-data-manipulation > activate
    ```
-6. run 
+6. make sure csv is included 
    ```sh
-   [php artisan migrate](http://localhost/wp-excel-data-manipulation/)
+   add the csv file here \wp-excel-data-manipulation\wp-content\uploads
    ```
 
 ## How to Run
 
 Open browser and typw
 
-* [npm start](http://localhost/wp-excel-data-manipulation/)
+* http://localhost/wp-excel-data-manipulation/
 
 <!-- CONTRIBUTING -->
 ## Contributing
