@@ -80,7 +80,7 @@ _Follow the steps below to install the project in your local machine._
 
 ## How to Run
 
-Open browser and typw
+Open browser and type
 
 * http://localhost/wp-excel-data-manipulation/
 
