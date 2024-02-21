@@ -18,7 +18,7 @@ get_header(); ?>
 <div class="container">
     <main id="main" class="site-main">
         <?php
-        // Path to your Excel file
+        // Path to your CSV file
         $csvFile = wp_upload_dir()['basedir'] . '/Dummy_Data.csv';
 
         // Ensure the file exists
@@ -64,6 +64,9 @@ get_header(); ?>
                 // Add the button to redirect to a new page for adding records
                 ?>
                     <a href="<?php echo esc_url(home_url('/add-record')); ?>" class="add-record-btn">Add New Record</a>
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Search...">
+                    </div>
                 <?php
 
                 // Generate HTML table markup with table design
@@ -76,7 +79,7 @@ get_header(); ?>
                 }
                 echo '</tr>';
                 echo '</thead>';
-                echo '<tbody>';
+                echo '<tbody id="tableBody">';
                 for ($i = 1; $i < count($csvData); $i++) {
                     echo '<tr>';
                     foreach ($csvData[$i] as $key => $cell) {
@@ -111,8 +114,28 @@ get_header(); ?>
         ?>
 
     </main><!-- #main -->
-</div><!-- .container -->
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const searchInput = document.getElementById('searchInput');
+        const tableBody = document.getElementById('tableBody');
 
+        searchInput.addEventListener('input', function() {
+            const searchText = this.value.toLowerCase();
+            const rows = tableBody.querySelectorAll('tr');
+            rows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                let rowVisible = false;
+                cells.forEach(cell => {
+                    if (cell.textContent.toLowerCase().includes(searchText)) {
+                        rowVisible = true;
+                    }
+                });
+                row.style.display = rowVisible ? '' : 'none';
+            });
+        });
+    });
+</script>
 <?php
 get_footer();
 ?>
