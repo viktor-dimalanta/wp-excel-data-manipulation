@@ -21,7 +21,7 @@
 <!-- ABOUT THE PROJECT -->
 ## Wordpress CSV Data Manipulation
 
-![image](https://github.com/viktor-dimalanta/wp-excel-data-manipulation/assets/45250045/e889b12c-84f6-428c-9483-8c1ffce8f22d)
+![image](https://github.com/viktor-dimalanta/wp-excel-data-manipulation/assets/45250045/6089054d-3dbc-4633-a08a-6c74b4800c23)
 
 The application is developed to fetch and add data dierctly to CSV and manipulate them to UI
 
