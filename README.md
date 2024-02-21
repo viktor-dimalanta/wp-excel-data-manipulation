@@ -59,7 +59,7 @@ _Follow the steps below to install the project in your local machine._
    ```
 2. Install XAMPP
    ```sh
-   https://www.apachefriends.org/download.html)
+   https://www.apachefriends.org/download.html
    ```
 3. Install Wordpress
    ```sh
