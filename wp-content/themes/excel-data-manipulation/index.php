@@ -9,7 +9,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * @subpackage Custom_Theme
+ * @subpackage WP CSV Data Manipulation
  * @since Custom Theme 1.0
  */
 
